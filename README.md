@@ -14,3 +14,12 @@ Raspberry Pi-hosted USB MIDI controller for recording and playing back MIDI file
     - Stop
     - Track location
 - MIDI channel configuration, accept multiple inputs
+
+# Building
+
+Run the following commands at the project root
+
+```bash
+cmake --build build
+./build/minimidi
+```

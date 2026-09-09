@@ -7,15 +7,15 @@ Raspberry Pi-hosted USB MIDI controller for recording and playing back MIDI file
 - MIDI over USB
 - Record MIDI input
 - Playback MIDI
-    - Loop
-    - Single play
+  - Loop
+  - Single play
 - MIDI transport control
-    - Start
-    - Stop
-    - Track location
+  - Start
+  - Stop
+  - Track location
 - MIDI channel configuration, accept multiple inputs
 
-# Building
+## Building
 
 Run the following commands at the project root
 

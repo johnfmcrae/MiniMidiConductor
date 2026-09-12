@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 using namespace std;
 
 void mainMenu() {
@@ -9,7 +10,7 @@ void mainMenu() {
     cout << "4. Show MIDI input\n";
     cout << endl;
     cout << "[x] exit\n";
-    auto userInput;
+    string userInput;
     cin >> userInput;
     cout << "Selected: " << userInput << endl;
 }

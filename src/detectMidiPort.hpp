@@ -2,7 +2,7 @@
 #include <iostream>
 
 void detectDefaultPort() {
-        // check for midi device
+    // check for midi device
     if (auto port = libremidi::midi1::out_default_port()) {
 	std::cout << "Found a default MIDI output port\n";
     } else {

@@ -14,8 +14,10 @@ void mainMenu()
     cout << "4. Show MIDI input\n";
     cout << endl;
     cout << "[x] exit\n";
+    cout << endl;
     string userInput;
     cin >> userInput;
+    cout << endl;
 
     if (userInput == "x" || userInput == "X")
         return;

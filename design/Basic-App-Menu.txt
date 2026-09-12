@@ -1,0 +1,7 @@
+-- Main Menu --
+1. Check for MIDI device
+2. Play single note loop
+3. Play sequence loop
+4. Show MIDI input
+
+[x] exit

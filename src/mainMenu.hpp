@@ -1,5 +1,8 @@
 #include <iostream>
 #include <string>
+
+#include "detectMidiPort.hpp"
+
 using namespace std;
 
 void mainMenu() {
@@ -12,5 +15,21 @@ void mainMenu() {
     cout << "[x] exit\n";
     string userInput;
     cin >> userInput;
-    cout << "Selected: " << userInput << endl;
+    
+    if (userInput == "x" || userInput == "X")
+        return;
+
+    try
+    {
+        const int userInputInt{stoi(userInput)};
+        switch (userInputInt)
+        {
+            case 1:
+                detectDefaultPort();
+        }
+        catch (std::invalid_argument const& ex)
+        {
+            std::cout << "Invalid input\n";
+        }
+    }
 }

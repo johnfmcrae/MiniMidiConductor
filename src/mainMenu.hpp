@@ -5,7 +5,8 @@
 
 using namespace std;
 
-void mainMenu() {
+void mainMenu()
+{
     cout << "-- Main Menu --\n";
     cout << "1. Check for MIDI device\n";
     cout << "2. Play single note loop\n";
@@ -15,7 +16,7 @@ void mainMenu() {
     cout << "[x] exit\n";
     string userInput;
     cin >> userInput;
-    
+
     if (userInput == "x" || userInput == "X")
         return;
 
@@ -24,12 +25,12 @@ void mainMenu() {
         const int userInputInt{stoi(userInput)};
         switch (userInputInt)
         {
-            case 1:
-                detectDefaultPort();
+        case 1:
+            detectDefaultPort();
         }
-        catch (std::invalid_argument const& ex)
-        {
-            std::cout << "Invalid input\n";
-        }
+    }
+    catch (std::invalid_argument const &ex)
+    {
+        std::cout << "Invalid input\n";
     }
 }

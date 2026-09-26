@@ -2,6 +2,7 @@
 #include <string>
 
 #include "detectMidiPort.hpp"
+#include "midiOutputTestLoops.hpp"
 
 using namespace std;
 
@@ -22,14 +23,15 @@ void mainMenu()
     if (userInput == "x" || userInput == "X")
         return;
 
-    try
-    {
+    try {
         const int userInputInt{stoi(userInput)};
-        switch (userInputInt)
-        {
+        switch (userInputInt) {
         case 1:
             detectDefaultPort();
+        case 2:
+            playSingleNoteLoopOnDefaultPort();
         }
+
     }
     catch (std::invalid_argument const &ex)
     {

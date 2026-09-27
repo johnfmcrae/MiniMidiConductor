@@ -1,3 +1,4 @@
+#pragma once
 #include <libremidi/libremidi.hpp>
 #include "detectMidiPort.hpp"
 #include <chrono>
@@ -11,8 +12,8 @@ void playSingleNoteLoopOnDefaultPort()
     if (!port)
         return;
     std::cout << "Sending MIDI messages on:\n";
-    std::cout << "  Display name: " << port->display_name << std : endl;
-    std::cout << "  Port name:    " << port->port_name << std : endl;
+    std::cout << "  Display name: " << port->display_name << std::endl;
+    std::cout << "  Port name:    " << port->port_name << std::endl;
 
     libremidi::midi_out out;
     out.open_port(*port);

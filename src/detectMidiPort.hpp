@@ -1,3 +1,4 @@
+#pragma once
 #include <libremidi/libremidi.hpp>
 #include <iostream>
 #include <optional>

@@ -28,8 +28,10 @@ void mainMenu()
         switch (userInputInt) {
         case 1:
             detectDefaultPort();
+            break;
         case 2:
             playSingleNoteLoopOnDefaultPort();
+            break;
         }
 
     }

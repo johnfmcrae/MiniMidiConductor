@@ -17,7 +17,13 @@ Raspberry Pi-hosted USB MIDI controller for recording and playing back MIDI file
 
 ## Building
 
-Run the following commands at the project root
+Set up the build with
+
+```bash
+cmake -B build
+```
+
+Then, run the following commands at the project root
 
 ```bash
 cmake --build build

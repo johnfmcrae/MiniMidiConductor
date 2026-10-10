@@ -29,3 +29,27 @@ Then, run the following commands at the project root
 cmake --build build
 ./build/minimidi
 ```
+
+## Project Set Up
+
+To edit and debug in VS Code, first run
+
+```bash
+cmake -B build -DCMAKE_BUILD_TYPE=Debug
+```
+
+This will make the commands list at `build/compile_commands.json`. To add this to the C++ configuration properties, add the following to your local `.vscode` folder:
+
+```json
+{
+    "configurations": [
+    {
+        "name": "Mac",
+        "compileCommands": "${workspaceFolder}/build/compile_commands.json",
+        "cppStandard": "c++20",
+        "intelliSenseMode": "macos-clang-x64"
+    }
+    ],
+    "version": 4
+}
+```

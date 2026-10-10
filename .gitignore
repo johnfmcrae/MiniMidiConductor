@@ -23,11 +23,6 @@
 *.dll
 *.so.*
 
-
-# Fortran module files
-*.mod
-*.smod
-
 # Compiled Static libraries
 *.lai
 *.la
@@ -58,9 +53,6 @@ compile_commands.json
 *.bak
 *.swp
 
-# vcpkg
-vcpkg_installed/
-
 # debug information files
 *.dwo
 
@@ -68,3 +60,6 @@ vcpkg_installed/
 Testing/
 .cache/
 MiniMidiConductor.code-workspace
+
+# VS Code
+/.vscode

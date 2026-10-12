@@ -1,22 +1,23 @@
 #pragma once
 #include <libremidi/libremidi.hpp>
+#include "detectMidiPort.hpp"
 #include <iostream>
+#include <string>
 
 libremidi::midi_in setUpMidiIn()
 {
-    auto my_callback = [](const libremidi::message &message)
+    auto infoCallback = [](const libremidi::message &message)
     {
-        // how many bytes
-        message.size();
-        // access to the individual bytes
-        message[i];
-        // access to the timestamp
-        message.timestamp;
+        std::cout << "Channel: " << std::to_string(message.get_channel()) << std::endl;
+        std::cout << "Message size: " << std::to_string(message.size()) << std::endl;
+        std::cout << "Bytes: "; 
+        for (auto byte : message)
+            std::cout << "[" << std::to_string(byte) << "]";
+        std::cout << std::endl;
     };
 
-    // Create the midi object
     libremidi::midi_in midi{
-        libremidi::input_configuration{.on_message = my_callback}};
+        libremidi::input_configuration{.on_message = infoCallback}};
     return midi;
 }
 
@@ -24,6 +25,9 @@ void monitorMidiOnDefaultPort()
 {
     auto midiIn = setUpMidiIn();
     if (auto port = libremidi::midi1::in_default_port())
-        midi.open_port(*port);
-    cout << "Message received: " + midiIn.message[i];
+        midiIn.open_port(*port);
+
+    std::cout << "Listening for MIDI messages. Enter anything to exit\n";
+    std::string userInput;
+    std::cin >> userInput;
 }

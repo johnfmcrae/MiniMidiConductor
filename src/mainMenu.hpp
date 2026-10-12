@@ -3,7 +3,7 @@
 
 #include "detectMidiPort.hpp"
 #include "midiOutputTestLoops.hpp"
-// #include "midiMonitor.hpp"
+#include "midiMonitor.hpp"
 
 using namespace std;
 
@@ -32,6 +32,7 @@ void mainMenu()
             case 3:
                 break;
             case 4:
+                monitorMidiOnDefaultPort();
                 break;
             }
         }

@@ -5,3 +5,17 @@
 4. Show MIDI input
 
 [x] exit
+
+1
+
+Found a default MIDI output port
+
+-- Device info --
+Manufacturer  : Arturia
+Product       : 
+Serial        : 
+Device name   : Arturia KeyStep 37
+Port name     : Arturia KeyStep 37
+Display name  : Arturia KeyStep 37
+
+>>

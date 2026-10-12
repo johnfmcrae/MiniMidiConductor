@@ -1,7 +1,8 @@
+#pragma once
 #include <libremidi/libremidi.hpp>
 #include <iostream>
 
-libremidi : midi_in setUpMidiIn()
+libremidi::midi_in setUpMidiIn()
 {
     auto my_callback = [](const libremidi::message &message)
     {

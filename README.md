@@ -53,3 +53,11 @@ This will make the commands list at `build/compile_commands.json`. To add this t
     "version": 4
 }
 ```
+
+The paths will only be updated for code that is touched by,
+
+```
+add_executable(minimidi src/main.cpp)
+```
+
+That is, there is a file that is eventually compiled by building main, the paths will be resolved after running `cmake -B build`. But if you are working on a new file, the imports won't appear right away.
